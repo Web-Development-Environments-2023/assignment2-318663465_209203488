@@ -1,11 +1,11 @@
-$(document).ready(function () {
-    // $("div.section-welcome").show();
-    // $("div.section-register").hide();
-    let displayNow = document.getElementsByClassName('section-welcome');
-    displayNow.style.display="block";
-    let regScreen = document.getElementsByClassName('section-register');
-        regScreen.style.display = "none";
-});
+// $(document).ready(function () {
+//     $("div.section-welcome").show();
+//     $("div.section-register").hide();
+//     // let displayNow = document.getElementsByClassName('section-welcome');
+//     // displayNow.style.display="block";
+//     // let regScreen = document.getElementsByClassName('section-register');
+//     //     regScreen.style.display = "none";
+// });
 
 
 function onClinkRegister(){
@@ -13,12 +13,22 @@ function onClinkRegister(){
 }
 
 function openRegister(){
-    let displayNow = document.getElementsByClassName('section-welcome');
-    displayNow.style.display="none";
-    let regScreen = document.getElementsByClassName('section-register');
-        regScreen.style.display = "block";
+	document.getElementById("section-welcome").style.display = "none";
+	document.getElementById("section-login").style.display = "none";
+
+    document.getElementById("section-register").style.display = "block";
 }
      
+function onClinkLogIn(){
+    openLogIn();
+}
+
+function openLogIn(){
+	document.getElementById("section-welcome").style.display = "none";
+    document.getElementById("section-register").style.display = "none";
+	document.getElementById("section-login").style.display = "block";
+
+}
 
 
 
