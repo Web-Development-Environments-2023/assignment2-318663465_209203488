@@ -2,15 +2,35 @@
     margin: 0;
     padding: 0;
 }
-.header{
-    min-height: 100vh;
-    width: 100%;
+header{
+      /* width: 500px;
+  float: left;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px; */
+
+}
+header img{
+    display: inline;
+
+    width:150px; 
+    height:150px
+}
+body{
+
+    display: flex;
+    flex-direction: column;
+
     background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url(images/flag.jpg);
+    min-height: 100vh; 
+     width: 100%;
+ 
     background-position: center;
     background-size: cover;
-    position: relative;
+    /* position: relative; */
 }
-.content {
+/* .content {
     margin: 5%;
     width: 80%;
     padding: 5%;
@@ -18,35 +38,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+ */
+ 
+ /* .section-register{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url(images/flag.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}  */
+
+form{
+
+    padding-top: 310px;
 }
-/* .header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url(images/flag.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-} */
-/* .section-register{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url(images/flag.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-} */
-
-
 nav{
-    /* display: flex; */
+    display: flex;
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
+    top:10px ;
 }
-.header img{
-    width:150px; 
-    height:150px
-}
+
 .nav-links{
     flex: 1;
     text-align: right;
@@ -86,7 +100,8 @@ nav{
     text-align: center;
 }
 .textBox h1{
-    font-size: 62px;
+    font-size : 62px;
+
 
 }
 .textBox p{
@@ -113,12 +128,16 @@ button:hover{
     transition: 1s;
 
 }
-.footer{
+footer{
+    margin-top: auto;
+     /* position: absolute;
+    bottom: 0px; */
     width: 100%;
+    height: 2.5rem;            
     text-align: center;
     padding: 30px 0;
 }
-.footer h4{
+footer h4{
     margin-bottom: 25px;
     margin-top: 20px;
     font-weight: 60;
@@ -133,12 +152,23 @@ h2{
 *{box-sizing: border-box}
 
 /* Add padding to containers */
-.container {
+/* .container {
   padding: 16px;
-}
+} */
 
+.container {
+
+    position: relative;
+    /* background-color: rgb(205, 205, 211); */
+    padding: 30px;
+    /* box-shadow: 0px 0px 6px 4px #c3b4b4; */
+    height: 400px;
+    margin-top: -350px;
+    z-index: 1000;
+    margin-bottom: 200px;
+  }
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text], input[type=password] ,[type=email]{
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -147,7 +177,7 @@ input[type=text], input[type=password] {
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus , input[type=email]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -186,6 +216,7 @@ a {
 }
 SELECT{
     padding: 5px;
+
   }
   input.date{
     width:50px;
@@ -206,4 +237,21 @@ color:#333;
 visibility: hidden;
  }
 
- 
+ .game{
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+
+ }
+ canvas { 
+
+  box-shadow: black 20px 10px 50px ;
+  /* background-image: url(images/back2.jpg); */
+  /* background-position: center;
+  background-size: cover; */
+
+  border: 1px solid black; 
+
+  /* align-items: center;
+padding-left: 100PX;} */
+ }
