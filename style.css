@@ -166,6 +166,7 @@ h2{
     margin-top: -350px;
     z-index: 1000;
     margin-bottom: 200px;
+
   }
 /* Full-width input fields */
 input[type=text], input[type=password] ,[type=email]{
@@ -238,9 +239,11 @@ visibility: hidden;
  }
 
  .game{
+
   flex-direction: column;
   align-items: center;
   display: flex;
+
 
  }
  canvas { 
@@ -254,4 +257,9 @@ visibility: hidden;
 
   /* align-items: center;
 padding-left: 100PX;} */
+ }
+ .container_game{
+  padding-top: 10px;
+  padding-left: 200px;
+
  }

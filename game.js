@@ -1,4 +1,6 @@
 import EnemyController from "./enemyController.js";
+import player from "./player.js";
+
 //  document.addEventListener('DOMContentLoaded',setInterval(),false)
 
 // // function openGame(){
@@ -27,10 +29,13 @@ canvas.height = "600";
 // background.src = "images/back2.jpg";
 
 const enemyController = new EnemyController(canvas);
+const player_=new player(canvas,3);
 function game(){
     console.log("gamae");
     // ctx.drawImage(url(images/back2.jpg),0,0,canvas.width,canvas.height)
-   enemyController.draw(ctx);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    enemyController.draw(ctx);
+    player_.draw(ctx);
 
 }
 
