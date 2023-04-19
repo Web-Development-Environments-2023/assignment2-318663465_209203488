@@ -58,6 +58,7 @@ function game(){
    
 
 }
+}
 
 function fisGameOver(){
     if(isGameOver){
