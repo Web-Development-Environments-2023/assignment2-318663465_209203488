@@ -261,5 +261,8 @@ padding-left: 100PX;} */
  .container_game{
   padding-top: 10px;
   padding-left: 200px;
+  align-items: center;
+  position: relative;
+  display: flex;
 
  }

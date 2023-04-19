@@ -16,6 +16,7 @@ function openRegister(){
 	document.getElementById("section-welcome").style.display = "none";
 	document.getElementById("section-login").style.display = "none";
     document.getElementById("section-PlayGame").style.display = "none";
+    document.getElementById("game-over").style.display = "none";
 
 	document.getElementById("header").style.display = "block";
 
@@ -28,6 +29,8 @@ function onClinkLogIn(){
 
 function openLogIn(){
 	document.getElementById("section-welcome").style.display = "none";
+    document.getElementById("game-over").style.display = "none";
+
     document.getElementById("section-register").style.display = "none";
     document.getElementById("section-PlayGame").style.display = "none";
 	document.getElementById("section-login").style.display = "block";
@@ -43,6 +46,8 @@ function openWelcome(){
     document.getElementById("section-register").style.display = "none";
 	document.getElementById("section-login").style.display = "none";
     document.getElementById("section-PlayGame").style.display = "none";
+    document.getElementById("game-over").style.display = "none";
+
 
 }
 
