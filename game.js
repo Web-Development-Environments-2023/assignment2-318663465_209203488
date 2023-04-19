@@ -55,7 +55,6 @@ function game(){
     player_.draw(ctx);
     playerShootController.draw(ctx);
     enemyShootController.draw(ctx);
-    }
    
 
 }
