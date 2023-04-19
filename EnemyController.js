@@ -22,18 +22,35 @@ fireDefaultTime=115;
 fireTimer=this.fireDefaultTime;
 
 
-    constructor(canvas,enemyBulletController){
+    constructor(canvas,enemyBulletController,playerShootController){
         this.canvas = canvas;
         this.enemyBulletController=enemyBulletController;
+        this.playerShootController=playerShootController;
+        this.enemyDeathSound=new Audio();
+        this.enemyDeathSound.volume=0.5;
         this.createEnemies();
     }
 
     draw(ctx){
         this.updateValocityAndDiraction();
+        this.collisionDetection();
         this.drawEnemies(ctx);
         this.fireBullet();
     
 
+    }
+    collisionDetection(){
+        this.enemyRows.forEach(enemyRow=>{
+            enemyRow.forEach((enemy,enemyIndex)=>{
+                if(this.playerShootController.collidateWith(enemy)){
+                    this.enemyDeathSound.currentTime=0;
+                    this.enemyDeathSound.play();
+                    enemyRow.splice(enemyIndex,1);
+                }
+            })
+
+        })
+        this.enemyRows=this.enemyRows.filter((enemyRow)=>enemyRow.length)
     }
 
     fireBullet(){

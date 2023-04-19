@@ -32,7 +32,7 @@ canvas.height = "600";
 const playerShootController = new shootController(canvas,"images/ba3.png",true);
 const enemyShootController = new shootController(canvas,"images/ba3.png",false);  
 
-const enemyController=  new EnemyController(canvas,enemyShootController);
+const enemyController=  new EnemyController(canvas,enemyShootController,playerShootController);
 var player_=new player(canvas,3,playerShootController);
 function resertGame(){
     

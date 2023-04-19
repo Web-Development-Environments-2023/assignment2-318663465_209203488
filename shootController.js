@@ -35,4 +35,14 @@ export default class shootController{
             this.nextShoot--;
         }
     }
+
+    collidateWith(sprite){
+        const bulletThatHitSpriteIndex=this.bullets.findIndex(bullet=>bullet.collidateWith(sprite));
+        if(bulletThatHitSpriteIndex>=0){
+            this.bullets.splice(bulletThatHitSpriteIndex,1);
+            return true;
+        }
+        return false;
+
+    }
 }
