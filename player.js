@@ -3,13 +3,14 @@ export default class player{
     leftPressed=false;
     upPressed=false;
     downPressed=false;
+    shootPressed=false;
     getRandomArbitrary(min, max) {
         return Math.random() * (max - min) + min;
       }
-    constructor(canvas,valocity){
+    constructor(canvas,valocity,shootController){
         this.canvas=canvas;
         this.valocity=valocity;
-        
+        this.shootController=shootController;
         this.width=200;
         this.height=180;
         this.x=Math.floor(Math.random() * (this.canvas.width - 0 + 1) + 0);
@@ -25,10 +26,14 @@ export default class player{
     
 
 draw(ctx){
+    if(this.shootPressed==true){
+        this.shootController.shoot(this.x+this.width/2,this.y,4,10);                                                                                                                      
+    }
     this.move();
     this.checkWalls();
     // let x=Math.floor(Math.random() * (this.canvas.width - 0 + 1) + 0);
-    ctx.drawImage(this.image,x,this.y,this.width,this.height);
+    ctx.drawImage(this.image,this.x,this.y,this.width,this.height);
+
 
 }
 
@@ -45,7 +50,7 @@ checkWalls(){
     if(this.y+this.height*(5/6)>this.canvas.height){
         this.y=this.canvas.height-this.height*(5/6);
     }
-    //up
+    //up-460 is 4 rows *enemy.height
     if(this.y<this.canvas.height-460+this.height){
         this.y=this.canvas.height-460+this.height
     }
@@ -79,6 +84,9 @@ if(event.code=='ArrowUp'){
 if(event.code=='ArrowDown'){
     this.downPressed=true;
 }
+if(event.code=='Space'){
+    this.shootPressed=true;
+}
 }
 
 keyup=event=>{if(event.code=='ArrowRight'){
@@ -91,6 +99,9 @@ if(event.code=='ArrowLeft'){
 }
 if(event.code=='ArrowDown'){
     this.downPressed=false;
+}
+if(event.code=='Space'){
+    this.shootPressed=false;
 }
 }
 

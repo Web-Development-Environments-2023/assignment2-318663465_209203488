@@ -1,5 +1,6 @@
 import EnemyController from "./enemyController.js";
 import player from "./player.js";
+import shootController from "./shootController.js";
 
 //  document.addEventListener('DOMContentLoaded',setInterval(),false)
 
@@ -28,14 +29,30 @@ canvas.height = "600";
 // const background = new Image();
 // background.src = "images/back2.jpg";
 
-const enemyController = new EnemyController(canvas);
-const player_=new player(canvas,3);
+const playerShootController = new shootController(canvas,"images/ba3.png",true);
+const enemyShootController = new shootController(canvas,"images/ba3.png",false);  
+
+const enemyController=  new EnemyController(canvas,enemyShootController);
+var player_=new player(canvas,3,playerShootController);
+function resertGame(){
+    
+    player_=new player(canvas,3);
+   
+}
+
+
+
 function game(){
     console.log("gamae");
+    window.addEventListener("beforeunload", function(event) {
+        resertGame();
+    });
     // ctx.drawImage(url(images/back2.jpg),0,0,canvas.width,canvas.height)
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     enemyController.draw(ctx);
     player_.draw(ctx);
+    playerShootController.draw(ctx);
+    enemyShootController.draw(ctx);
 
 }
 

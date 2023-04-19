@@ -18,17 +18,36 @@ xValocity=0;
 //yValocity=0;
 defaultXValocity=1;
 //defaultYValocity=1;
+fireDefaultTime=115;
+fireTimer=this.fireDefaultTime;
 
-    constructor(canvas){
+
+    constructor(canvas,enemyBulletController){
         this.canvas = canvas;
+        this.enemyBulletController=enemyBulletController;
         this.createEnemies();
     }
 
     draw(ctx){
         this.updateValocityAndDiraction();
         this.drawEnemies(ctx);
+        this.fireBullet();
     
 
+    }
+
+    fireBullet(){
+        this.fireTimer--;
+       if(this.fireTimer<=0){
+        this.fireTimer=this.fireDefaultTime;
+        const all=this.enemyRows.flat();
+        const enemyIndex=Math.floor(Math.random()*(all.length-1));
+        const enemy=all[enemyIndex];
+        this.enemyBulletController.shoot(enemy.x+enemy.width/2,enemy.y+enemy.height/2,-3)
+        console.log(enemy.x+enemy.width/2);
+        console.log(enemyIndex);
+
+        }
     }
     //moving enemies
 updateValocityAndDiraction() {
