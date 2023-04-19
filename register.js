@@ -150,3 +150,31 @@
 //         }
      
 // }
+
+// var registeredUsers={};
+// function ValidForm(){
+//     let username = document.forms["LogIn"]["username"].value;
+//     let password = document.forms["LogIn"]["psw"].value;
+//     if (username == "") {
+//         alert("user name must be filled out");
+//         return false;
+//     }
+//     else if (password=="") {
+//         alert("passsword must be filled out");
+//             return false;
+
+//     }else if(username!="p" && !(username in registeredUsers)){
+//         alert("incorrect userName");
+//         return false;
+//         }       
+//     }else  if(username in registeredUsers){
+//         if(password !=registeredUsers[username]){
+            
+//         }else if(password==""){
+//             alert("passsword must be filled out");
+//             return false;
+//         }
+        
+//     }
+        
+//     }

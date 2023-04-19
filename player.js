@@ -3,14 +3,17 @@ export default class player{
     leftPressed=false;
     upPressed=false;
     downPressed=false;
-
+    getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
+      }
     constructor(canvas,valocity){
         this.canvas=canvas;
         this.valocity=valocity;
-        this.x=canvas.width/2-100;
-        this.y=canvas.height -165;
+        
         this.width=200;
         this.height=180;
+        this.x=Math.floor(Math.random() * (this.canvas.width - 0 + 1) + 0);
+        this.y=this.canvas.height-this.height*(5/6);
         this.image=new Image();
         this.image.src="images/uni.png";
 
@@ -23,8 +26,29 @@ export default class player{
 
 draw(ctx){
     this.move();
-    ctx.drawImage(this.image,this.x,this.y,this.width,this.height);
+    this.checkWalls();
+    // let x=Math.floor(Math.random() * (this.canvas.width - 0 + 1) + 0);
+    ctx.drawImage(this.image,x,this.y,this.width,this.height);
 
+}
+
+checkWalls(){
+    //left
+    if(this.x+this.width/4<0){
+        this.x=0-this.width/4
+    }
+    //right
+    if(this.x+this.width*(3/4)>this.canvas.width){
+        this.x=this.canvas.width-(3/4)*this.width;
+    }
+    //down
+    if(this.y+this.height*(5/6)>this.canvas.height){
+        this.y=this.canvas.height-this.height*(5/6);
+    }
+    //up
+    if(this.y<this.canvas.height-460+this.height){
+        this.y=this.canvas.height-460+this.height
+    }
 }
 move(){
     if(this.rightPressed){
@@ -41,6 +65,7 @@ move(){
 
     }
 }
+
 
 keydown=event=>{if(event.code=='ArrowRight'){
     this.rightPressed=true;
