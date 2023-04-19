@@ -40,20 +40,38 @@ function resertGame(){
    
 }
 
-
+let isGameOver=false;
+let lifeCounter=3;
 
 function game(){
-    console.log("gamae");
     window.addEventListener("beforeunload", function(event) {
         resertGame();
     });
-    // ctx.drawImage(url(images/back2.jpg),0,0,canvas.width,canvas.height)
+    fisGameOver();
+    if(!isGameOver){
+            // ctx.drawImage(url(images/back2.jpg),0,0,canvas.width,canvas.height)
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     enemyController.draw(ctx);
     player_.draw(ctx);
     playerShootController.draw(ctx);
     enemyShootController.draw(ctx);
+    }
+   
 
+}
+
+function fisGameOver(){
+    if(isGameOver){
+        return;
+    }else if(enemyShootController.collidateWith(player_) && lifeCounter>0){
+        lifeCounter--;
+        console.log(lifeCounter);
+        return;
+    }else if (enemyShootController.collidateWith(player_) && lifeCounter==0){
+        isGameOver=true;
+        return;
+
+    }
 }
 
 

@@ -11,6 +11,8 @@ export default class player{
         this.canvas=canvas;
         this.valocity=valocity;
         this.shootController=shootController;
+        this.playerDeathSound= new Audio();
+        this.playerDeathSound.volume=0.5;
         this.width=200;
         this.height=180;
         this.x=Math.floor(Math.random() * (this.canvas.width - 0 + 1) + 0);
@@ -36,6 +38,7 @@ draw(ctx){
 
 
 }
+
 
 checkWalls(){
     //left

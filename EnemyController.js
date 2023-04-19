@@ -60,9 +60,7 @@ fireTimer=this.fireDefaultTime;
         const all=this.enemyRows.flat();
         const enemyIndex=Math.floor(Math.random()*(all.length-1));
         const enemy=all[enemyIndex];
-        this.enemyBulletController.shoot(enemy.x+enemy.width/2,enemy.y+enemy.height/2,-3)
-        console.log(enemy.x+enemy.width/2);
-        console.log(enemyIndex);
+        this.enemyBulletController.shoot(enemy.x+enemy.width/2,enemy.y+enemy.height/2,-3);
 
         }
     }
