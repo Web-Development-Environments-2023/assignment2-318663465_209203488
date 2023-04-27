@@ -602,6 +602,7 @@ canvas {     width:  100%;
    border-top: 1px solid #333;
 
  }
+<<<<<<< HEAD
  
  #myTable tr:last-child td {
     border-bottom: 1px solid #333;
@@ -617,4 +618,12 @@ canvas {     width:  100%;
 
    }
 
+=======
+ .container_game{
+  padding-top: 10px;
+  padding-left: 200px;
+  align-items: center;
+  position: relative;
+  display: flex;
+>>>>>>> 8ef85746d7efd685f406bfa1dde94c530b718f9b
 
