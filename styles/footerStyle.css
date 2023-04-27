@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+/* over on social-icons  */
+li > a:hover{
+    color: #d9d9d9;
+    text-decoration:  underline;
+}
+
+#icons {
+    width: 350px;
+    display:inline-block;
+    /* margin: 0 auto; */
+
+}
+/* 
+ul.social-icons {
+    display: inline-block;
+
+} */
+.icons li {
+
+    display: inline-block;
+
+}
+.icons a {
+    color: #fff;
+}
+.fa-facebook {
+    /* padding:5px 10px; */
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+    border-radius: 50%;
+
+}
+.fa-facebook:hover {
+    background-color: #1a62f3;
+}
+.fa-linkedin {
+    /* padding:10px 14px; */
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+    border-radius: 50%;
+}
+.fa-linkedin:hover {
+    background-color: #e4467b;
+}
+.fa-github {
+    /* padding:10px 14px; */
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+    border-radius: 50%;
+}
+.fa-github:hover {
+    background-color: #f6b910;
+}
+.fa-instagram {
+    /* padding:10px 14px; */
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+    border-radius: 50%;
+}
+.fa-instagram:hover {
+    background-color: #69914d;
+}
+
+.fa-google {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+    border-radius: 50%;
+}
+.fa-google:hover {
+    background-color: #5a32a3;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+    border-top: 3px solid rgb(49, 38, 38);
+    padding: 15px ;
+    font-size: 5px;
+    color: #f6d267;
+    margin-bottom: 0px;
+    
+
+}
+
+
+/* .footer-container-child:first-child {
+    margin-right: 20px;
+}  */
+
+._14 {
+    text-align: center;
+}
+
+
