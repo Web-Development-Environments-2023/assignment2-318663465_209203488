@@ -6,8 +6,7 @@ import shootController from "./shootController.js";
 
 const canvas  = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-// ctx.canvas.width  = window.innerWidth*0.8;
-// ctx.canvas.height = window.innerHeight*0.6;
+
 
 canvas.width = "900";
 canvas.height = "425";
