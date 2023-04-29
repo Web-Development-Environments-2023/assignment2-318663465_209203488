@@ -27,7 +27,7 @@ function updateArrowsDisplay(keyCode){
       return String.fromCharCode(keyCode); // The char itself as write in keyboard - 'A'
   }
 }
-var shoot;
+var shoot=32;
 function changeArrowSettings(typeArrow){
     $(document).on('keydown', (event) => {
         keyCode = event.keyCode; //The val as a number
