@@ -6,10 +6,13 @@ import shootController from "./shootController.js";
 
 const canvas  = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
+ctx.canvas.width=window.innerWidth*0.8;
+ctx.canvas.height=window.innerHeight*0.75;
 
 
-canvas.width = "900";
-canvas.height = "425";
+
+// canvas.width = "900";
+// canvas.height = "425";
 // const background = new Image();
 // background.src = "images/back2.jpg";
 
@@ -113,6 +116,7 @@ function fisGameOver(){
         setTimeout(function() {
          LostSound.play();
           WinSound.play();
+          $("#footer").show();
           changeScreen("score-record");
         }, 500); // Delay the alert by 0.5 seconds
         changeLife();
@@ -133,6 +137,7 @@ function fisGameOver(){
         WinSound.play();
         setTimeout(function() {
           window.alert(message);
+          $("#footer").show();
           changeScreen("score-record");
         }, 500);
         
@@ -151,6 +156,7 @@ function fisGameOver(){
         WinSound.play();
         setTimeout(function() {
           window.alert("Winner!!!");
+          $("#footer").show();
         changeScreen("score-record");
         }, 500);
         
@@ -166,6 +172,7 @@ function fisGameOver(){
         WinSound.play();
         setTimeout(function() {
           window.alert("Champion!");
+          $("#footer").show();
           changeScreen("score-record");
         }, 500); // Delay the alert by 0.5 seconds
         

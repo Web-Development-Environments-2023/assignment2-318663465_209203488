@@ -47,7 +47,8 @@ function changeScreen(id){
     $('#'+id).show();
     $('#'+id).focus();
     gameSound.pause();
-    if (id === 'game-screen' && !gameInterval && gameFunc) {   
+    if (id === 'game-screen' && !gameInterval && gameFunc) {  
+        $("#footer").hide();
         WinSound.pause();
         gameSound.currentTime=0;    
         gameSound.play();
@@ -56,9 +57,11 @@ function changeScreen(id){
         resetFunc();
         gameInterval = setInterval(gameFunc,1000/60)}
     if(id=='score-record'){
+        $("#footer").show();
             gameSound.pause();
             WinSound.play();
     }if(id!='game-screen'){
+        $("#footer").show();
         gameSound.pause();
 
     }
