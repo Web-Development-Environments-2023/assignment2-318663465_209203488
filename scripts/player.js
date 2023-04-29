@@ -54,8 +54,8 @@ checkWalls(){
         this.y=this.canvas.height-this.height*(5/6);
     }
     //up-280 is 4 rows *enemy.height
-    if(this.y<0.4*(this.canvas.height-280)){
-        this.y=0.4*(this.canvas.height-280)
+    if(this.y<0.6*(this.canvas.height-100)){
+        this.y=0.6*(this.canvas.height-100)
     }
 }
 move(){

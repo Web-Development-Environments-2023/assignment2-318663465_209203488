@@ -430,8 +430,18 @@ h1 {
     font-size: 15px;
     letter-spacing: 7px;
     font-family: system-ui;
+    color:white;
 }
 
+#Settings h1 {
+    font-size: 15px;
+    letter-spacing: 7px;
+    font-family: system-ui;
+    color:#333;
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
 .error,
 #message,
 #msg-arrow-settings,
