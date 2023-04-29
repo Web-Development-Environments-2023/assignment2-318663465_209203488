@@ -163,7 +163,7 @@ updateValocityAndDiraction() {
             row.forEach((enemyNum,enemyIndex)=>{
                 if(enemyNum>=0){
                     //if the enemy exist-create obj and add to the enemy list
-                    this.enemyRows[rowIndex].push(new Enemy(enemyIndex*110,rowIndex*40,enemyNum));
+                    this.enemyRows[rowIndex].push(new Enemy(enemyIndex*110,rowIndex*45,enemyNum));
                     // console.log("enemy nummmms");
                     // console.log(enemyNum);
             

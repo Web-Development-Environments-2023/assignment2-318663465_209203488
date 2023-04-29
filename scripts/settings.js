@@ -213,7 +213,7 @@ function chooseImage(pngstring){
   else if(pngstring=="images/bad3.png"){ return "Ukraine"}
   else if(pngstring=="images/bad4.png"){ return "Finland"}
   else if(pngstring=="images/bad5.png"){ return "Denmark"}
-  else if(pngstring=="images/bad6.png"){ return "3"}
+  else if(pngstring=="images/bad6.png"){ return "Greece"}
   else if(pngstring=="images/bad7.png"){ return "Switzerland"}
   else if(pngstring=="images/bad8.png"){ return "Portugal"}
   else if(pngstring=="images/bad9.png"){ return "England"}
